@@ -1,0 +1,17 @@
+sweave
+Sweave
+install.Packages("roxygen2 ")
+install.packages("roxygen2 ")
+install.packages("roxygen2")
+rawdata=read.table("testdata.csv",header=T)
+rawdata
+size(rawdata)
+dim(rawdata)
+rawdata(1)
+rawdata[1]
+rawdata=read.csv("testdata.csv",header=T)
+dim(rawdata)
+rawdata[1]
+rawdata[1,1]
+rawdata.head
+rawdata=read.csv("testdata.csv",header=TRUE)
