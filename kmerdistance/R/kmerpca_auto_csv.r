@@ -27,6 +27,7 @@ kmerpca <- function(filename,outputfile, plotmain = "Main", ifscale = 1, ifbinar
 	}
 
 	if(numofp == 3){
+		require(rgl,quietly=T)
 		#thisplot = plot3d(pcaloadings,type="p",col="red",main=plotmain)+text3d(pcaloadings,text=rownames(pcaloadings),font=3,col="blue") %print 3d structre only when first 3 main components are used
 	}
 	thisdist = as.matrix(dist(pcaloadings))

@@ -1,0 +1,4 @@
+sweave
+Sweave
+source("kmerpca_auto_csv.r")
+dis=kmerpca("testdata.csv","test_hPCA_dis.csv")

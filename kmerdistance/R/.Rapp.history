@@ -3,15 +3,1022 @@ Sweave
 install.Packages("roxygen2 ")
 install.packages("roxygen2 ")
 install.packages("roxygen2")
-rawdata=read.table("testdata.csv",header=T)
-rawdata
-size(rawdata)
-dim(rawdata)
-rawdata(1)
-rawdata[1]
-rawdata=read.csv("testdata.csv",header=T)
-dim(rawdata)
-rawdata[1]
-rawdata[1,1]
-rawdata.head
-rawdata=read.csv("testdata.csv",header=TRUE)
+path.to.data="../data/"
+#read in all kc files in path.to.data#
+	kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(i==1)#
+		{#
+			klist=sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]);#
+		}#
+		else#
+		{#
+			klist=c(klist,sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]));#
+		}#
+	}
+library(Matrix)#
+	#read in all kc files in path.to.data#
+	kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(i==1)#
+		{#
+			klist=sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]);#
+		}#
+		else#
+		{#
+			klist=c(klist,sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]));#
+		}#
+	}
+scaled = scale(klist)
+require(Matrix)
+klist[1,1]
+klist
+typeof(klist)
+dim(klist)
+a=sparseMatrix(c(1,3,4,5), c(1,1,1,1), x=c(2,3,4,5))
+a
+a=c(a,a,a)
+a
+dim(a)
+class(a)
+a[1,1]
+a[[1,1]]
+a[[1]]
+a[[1]][1]
+a[[1]][2]
+class(a[[[1]])
+class(a[[1]])
+class(klist[[1]])
+class(klist[[2]])
+class(klist[[3]])
+a
+scale
+zscale
+a.scale <- lapply(a, function(m){return(m - mean(m) / sd(m))})
+a.scale
+a.scale <- lapply(a, function(m){return((m - mean(m)) / sd(m))})
+a.scale
+klist.scale <- lapply(klist, function(m){return((m - mean(m)) / sd(m))})
+pcaloadings=princomp(klist.scale)$loadings[,1:numofp];
+do.call(rbind, klist)
+a=sparseMatrix(c(1,3,4,5), c(1,1,1,1), x=c(2,3,4,5))
+a
+a=cbind(a,a,a)
+a
+a=sparseMatrix(c(1,3,4,5), c(1,1,1,1), x=c(2,3,4,5))
+b=cbind(a,a)
+b
+a[1]
+b[1]
+b[2]
+class(b)
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(i==1)#
+		{#
+			klist=sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]);#
+		}#
+		else#
+		{#
+			klist=cbind(klist,sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]));#
+		}#
+	}
+klist.scale <- lapply(klist, function(m){return((m - mean(m)) / sd(m))})
+pcaloadings=princomp(klist.scale)$loadings[,1:numofp]
+class(klist)
+class(klist.sclae)
+class(klist.scale)
+scaled = scale(klist)
+class(klist)
+scaled = scale(klist)
+klist.scale <- apply(klist, function(m){return((m - mean(m)) / sd(m))})
+klist.scale <- lapply(klist, function(m){return((m - mean(m)) / sd(m))})
+klist.scale <- lapply(klist, 2,function(m){return((m - mean(m)) / sd(m))})
+klist.scale <- apply(klist, 2,function(m){return((m - mean(m)) / sd(m))})
+klist[1,1]
+klist[1,2]
+klist[1,3]
+klist[2,3]
+dim(klist)
+a
+a[1]
+a[2]
+b=cbind(a,a)
+b
+b[1]
+b[2]
+b[3]
+b[[1,1]]
+b[[1]][1]
+b.scale <- lapply(b, function(m){return((m - mean(m)) / sd(m))})
+b.scale
+do.call(rbind, b)
+do.call(cbind, b)
+do.call(cbind, b.sacle)
+do.call(cbind, b.scale)
+b[1]
+c=do.call(cbind, b.scale)
+c
+c[1]
+klist.scale <- lapply(klist, function(m){return((m - mean(m)) / sd(m))})#
+		scaled=do.call(cbind, klist.scale)
+pcaloadings=princomp(scaled)$loadings[,1:numofp]
+dim(scaled)
+scaled[1]
+dim(scaled[[1:3]])
+dim(scaled[[1:3]][])
+dim(scaled[[1:3]][1])
+dim(scaled[[1]][1])
+dim(scaled[[1]][)
+dim(scaled[[1]])
+dim(scaled[[2]])
+dim(scaled[[3]])
+kcfile
+kcfiles
+kcFiles
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(i==1)#
+		{#
+			klist=sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]);#
+		}#
+		else#
+		{#
+			klist=cbind(klist,sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]));#
+		}#
+	}
+kcFiles
+dim(scaled[[1]])
+dim(kclist[[1]])
+dim(klist[[1]])
+dim(klist)
+klist.scale <- lapply(klist, function(m){return((m - mean(m)) / sd(m))})
+dim(scaled[[1]])
+dim(kclist.scale[[1]])
+dim(klist.scale[[1]])
+scaled=do.call(cbind, klist.scale)
+dim(scaled[[1]])
+source("kmerDistance.R")
+kmerDistance.dif(8)
+pcaloadings=princomp(scaled)$loadings[,1:numofp]
+dim(scaled)
+class(scaled[[1]])
+class(scaled[[1:2]])
+class(scaled[[2]])
+class(scaled[[1:3]])
+dim(klist)
+temp[,1]
+temp[,2]
+scale(temp[,2])
+ifscale = TRUE,
+ifscale = TRUE
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(ifscale)#
+		{#
+			if(i==1)#
+			{#
+				klist=sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=scale(temp[,2]));#
+			}#
+			else#
+			{#
+				klist=cbind(klist,sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=scale(temp[,2])));#
+			}#
+		}#
+		else#
+		{#
+			if(i==1)#
+			{#
+				klist=sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]);#
+			}#
+			else#
+			{#
+				klist=cbind(klist,sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]));#
+			}#
+		}#
+	}
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(ifscale)#
+		{#
+			if(i==1)#
+			{#
+				klist=sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=scale(temp[,2]));#
+			}#
+			else#
+			{#
+				klist=cbind(klist,sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=scale(temp[,2])));#
+			}#
+		}#
+		else#
+		{#
+			if(i==1)#
+			{#
+				klist=sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=temp[,2]);#
+			}#
+			else#
+			{#
+				klist=cbind(klist,sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=temp[,2]));#
+			}#
+		}#
+	}
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+			if(i==1)#
+			{#
+				klist=sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=scale(temp[,2]));#
+			}#
+			else#
+			{#
+				klist=cbind(klist,sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=scale(temp[,2])));#
+			}#
+	}
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(i==1)#
+		{#
+			klist=sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=scale(temp[,2]));#
+		}#
+		else#
+		{#
+			klist=cbind(klist,sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=scale(temp[,2])));#
+		}#
+	}
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(i==1)#
+		{#
+			klist=sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]);#
+		}#
+		else#
+		{#
+			klist=cbind(klist,sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]));#
+		}#
+	}
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(i==1)#
+		{#
+			klist=sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=scale(temp[,2]));#
+		}#
+		else#
+		{#
+			klist=cbind(klist,sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=scale(temp[,2])));#
+		}#
+	}
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(ifscale)#
+		{#
+			ts=scale(temp[,2]);#
+			if(i==1)#
+			{#
+				klist=sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=ts);#
+			}#
+			else#
+			{#
+				klist=cbind(klist,sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=ts);#
+			}#
+		}#
+		else#
+		{#
+			if(i==1)#
+			{#
+				klist=sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=temp[,2]);#
+			}#
+			else#
+			{#
+				klist=cbind(klist,sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=temp[,2]));#
+			}#
+		}#
+	}
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(ifscale)#
+		{#
+			ts=scale(temp[,2]);#
+			if(i==1)#
+			{#
+				klist=sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=ts);#
+			}#
+			else#
+			{#
+				klist=cbind(klist,sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=ts));#
+			}#
+		}#
+		else#
+		{#
+			if(i==1)#
+			{#
+				klist=sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=temp[,2]);#
+			}#
+			else#
+			{#
+				klist=cbind(klist,sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=temp[,2]));#
+			}#
+		}#
+	}
+ts=scale(temp[,2]);
+class(temp[,2])
+class(ts)
+ts
+class(temp[,2])
+temp[,2]
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(ifscale)#
+		{#
+			ts=as.vector(scale(temp[,2]));#
+			if(i==1)#
+			{#
+				klist=sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=ts);#
+			}#
+			else#
+			{#
+				klist=cbind(klist,sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=ts));#
+			}#
+		}#
+		else#
+		{#
+			if(i==1)#
+			{#
+				klist=sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=temp[,2]);#
+			}#
+			else#
+			{#
+				klist=cbind(klist,sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=temp[,2]));#
+			}#
+		}#
+	}
+class(klist)
+pcaloadings=princomp(klist)$loadings[,1:numofp]
+dim(klist)
+o=as.vector(klist[[1]])
+length(o)
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(ifscale)#
+		{#
+			ts=as.vector(scale(temp[,2]));#
+			if(i==1)#
+			{#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=ts));#
+			}#
+			else#
+			{#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=ts)));#
+			}#
+		}#
+		else#
+		{#
+			if(i==1)#
+			{#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=temp[,2]));#
+			}#
+			else#
+			{#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=temp[,2])));#
+			}#
+		}#
+	}
+as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=ts))
+klist
+dim(klist)
+klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=ts))
+dim(klist)
+length(klist)
+n=sparseMatrix((temp[,1]+1), as.vector(rep(i,tl)), x=ts);
+dim(n)
+n
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(ifscale)#
+		{#
+			ts=as.vector(scale(temp[,2]));#
+			if(i==1)#
+			{#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts));#
+			}#
+			else#
+			{#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts)));#
+			}#
+		}#
+		else#
+		{#
+			if(i==1)#
+			{#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]));#
+			}#
+			else#
+			{#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2])));#
+			}#
+		}#
+	}
+dim(klist)
+pcaloadings=princomp(scaled)$loadings[,1:numofp]
+pcaloadings=princomp(klist)$loadings[,1:numofp]
+plotmain = "Main"
+pcaloadings=princomp(klist)$loadings[,1:numofp]
+numofp = 3
+pcaloadings=princomp(klist)$loadings[,1:numofp]
+thisdist = as.matrix(dist(pcaloadings))
+outputfile="kemr.hpca.distance.csv"
+write.csv(thisdist,file=outputfile, quote=F)
+hpcad=data.frame(thisdist);#
+	names(hpcad)=kcFiles;#
+	write.csv(hpcad,output,row.names=kcFiles,quote=F);
+hpcad=data.frame(thisdist);#
+	names(hpcad)=kcFiles;#
+	write.csv(hpcad,outputfile,row.names=kcFiles,quote=F);
+hpcad
+hpcad=data.frame(thisdist);
+hpcad
+pcaloadings
+klist
+class(klist)
+hpcad=data.frame(thisdist,row.names = NULL,check.rows = FALSE);
+names(hpcad)=kcFiles;#
+	write.csv(hpcad,outputfile,row.names=kcFiles,quote=F);#
+	#write.csv(thisdist,file=outputfile, quote=F)
+pcaloadings=princomp(scaled_binaried)$loadings[,1:numofp]
+pcaloadings=princomp(klist)$loadings[,1:numofp]
+thisdist = as.matrix(dist(pcaloadings))#
+	hpcad=data.frame(thisdist,row.names = NULL,check.rows = FALSE);#
+	names(hpcad)=kcFiles;#
+	write.csv(hpcad,outputfile,row.names=kcFiles,quote=F);
+pcaloadings
+thisdist
+dist(pcaloadings)
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(ifscale)#
+		{#
+			ts=as.vector(scale(temp[,2]));#
+			if(i==1)#
+			{#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts));#
+			}#
+			else#
+			{#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts)));#
+			}#
+		}#
+		else#
+		{#
+			if(i==1)#
+			{#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]));#
+			}#
+			else#
+			{#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2])));#
+			}#
+		}#
+	}#
+	#require(rgl,quietly=T)klist#
+	#klist=read.csv(inputfile,header=T)#
+	# need to scale first then binary or you will get error info "Error in cov.wt(z) : 'x' must contain finite values only"#
+	#scaled = scale(klist)#
+	#klist.scale <- lapply(klist, function(m){return((m - mean(m)) / sd(m))})#
+	#scaled=do.call(cbind, klist.scale)#
+	if(!ifbinary){#
+		#scaled[is.nan(scaled)] <- 0#
+		pcaloadings=princomp(klist)$loadings[,1:numofp]#
+		#print("Will plot unbinaried scaled graph",quote=F)#
+	}#
+	else{#
+		#scaled[is.nan(scaled)] <- 0#
+		scaled_binaried = ifelse(klist>0, 1, 0)#
+		pcaloadings=princomp(scaled_binaried)$loadings[,1:numofp]#
+		#print("Will plot binaried scaled graph",quote=F)#
+	}#
+	#print 3d structre only when first 3 main components are used#
+	if(plot){#
+		thisplot = plot3d(pcaloadings,type="p",col="red",main=plotmain)+text3d(pcaloadings,text=rownames(pcaloadings),font=3,col="blue")#
+	}#
+	thisdist = as.matrix(dist(pcaloadings))#
+	hpcad=data.frame(thisdist,row.names = NULL,check.rows = FALSE);#
+	names(hpcad)=kcFiles;#
+	write.csv(hpcad,outputfile,row.names=kcFiles,quote=F);#
+	#write.csv(thisdist,file=outputfile, quote=F)
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(ifscale)#
+		{#
+			ts=as.vector(scale(temp[,2]));#
+			if(i==1)#
+			{#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts));#
+			}#
+			else#
+			{#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts)));#
+			}#
+		}#
+		else#
+		{#
+			if(i==1)#
+			{#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]));#
+			}#
+			else#
+			{#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2])));#
+			}#
+		}#
+	}#
+	#require(rgl,quietly=T)klist#
+	#klist=read.csv(inputfile,header=T)#
+	# need to scale first then binary or you will get error info "Error in cov.wt(z) : 'x' must contain finite values only"#
+	#scaled = scale(klist)#
+	#klist.scale <- lapply(klist, function(m){return((m - mean(m)) / sd(m))})#
+	#scaled=do.call(cbind, klist.scale)#
+	if(!ifbinary){#
+		#scaled[is.nan(scaled)] <- 0#
+		pcaloadings=princomp(klist)$loadings[,1:numofp]#
+		#print("Will plot unbinaried scaled graph",quote=F)#
+	}#
+	else{#
+		#scaled[is.nan(scaled)] <- 0#
+		scaled_binaried = ifelse(klist>0, 1, 0)#
+		pcaloadings=princomp(scaled_binaried)$loadings[,1:numofp]#
+		#print("Will plot binaried scaled graph",quote=F)#
+	}#
+	#print 3d structre only when first 3 main components are used#
+	if(plot){#
+		thisplot = plot3d(pcaloadings,type="p",col="red",main=plotmain)+text3d(pcaloadings,text=rownames(pcaloadings),font=3,col="blue")#
+	}#
+	thisdist = as.matrix(dist(pcaloadings))#
+	hpcad=data.frame(thisdist,row.names = NULL,check.rows = FALSE);#
+	names(hpcad)=kcFiles;#
+	write.csv(hpcad,outputfile,row.names=kcFiles,quote=F);#
+	#write.csv(thisdist,file=outputfile, quote=F)
+outputfile="kemr.hpca.distance.csv"
+path.to.data="../data/"
+ifscale = TRUE
+ifbinary = FALSE
+numofp = 3
+plot = FALSE
+plotmain = "Main"
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(ifscale)#
+		{#
+			ts=as.vector(scale(temp[,2]));#
+			if(i==1)#
+			{#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts));#
+			}#
+			else#
+			{#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts)));#
+			}#
+		}#
+		else#
+		{#
+			if(i==1)#
+			{#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]));#
+			}#
+			else#
+			{#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2])));#
+			}#
+		}#
+	}#
+	#require(rgl,quietly=T)klist#
+	#klist=read.csv(inputfile,header=T)#
+	# need to scale first then binary or you will get error info "Error in cov.wt(z) : 'x' must contain finite values only"#
+	#scaled = scale(klist)#
+	#klist.scale <- lapply(klist, function(m){return((m - mean(m)) / sd(m))})#
+	#scaled=do.call(cbind, klist.scale)#
+	if(!ifbinary){#
+		#scaled[is.nan(scaled)] <- 0#
+		pcaloadings=princomp(klist)$loadings[,1:numofp]#
+		#print("Will plot unbinaried scaled graph",quote=F)#
+	}#
+	else{#
+		#scaled[is.nan(scaled)] <- 0#
+		scaled_binaried = ifelse(klist>0, 1, 0)#
+		pcaloadings=princomp(scaled_binaried)$loadings[,1:numofp]#
+		#print("Will plot binaried scaled graph",quote=F)#
+	}#
+	#print 3d structre only when first 3 main components are used#
+	if(plot){#
+		thisplot = plot3d(pcaloadings,type="p",col="red",main=plotmain)+text3d(pcaloadings,text=rownames(pcaloadings),font=3,col="blue")#
+	}#
+	thisdist = as.matrix(dist(pcaloadings))#
+	hpcad=data.frame(thisdist,row.names = NULL,check.rows = FALSE);#
+	names(hpcad)=kcFiles;#
+	write.csv(hpcad,outputfile,row.names=kcFiles,quote=F);#
+	#write.csv(thisdist,file=outputfile, quote=F)
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(ifscale)#
+		{#
+			ts=as.vector(scale(temp[,2]));#
+			if(i==1)#
+			{#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts));#
+			}#
+			else#
+			{#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts)));#
+			}#
+		}#
+		else#
+		{#
+			if(i==1)#
+			{#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]));#
+			}#
+			else#
+			{#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2])));#
+			}#
+		}#
+	}#
+	#require(rgl,quietly=T)klist#
+	#klist=read.csv(inputfile,header=T)#
+	# need to scale first then binary or you will get error info "Error in cov.wt(z) : 'x' must contain finite values only"#
+	#scaled = scale(klist)#
+	#klist.scale <- lapply(klist, function(m){return((m - mean(m)) / sd(m))})#
+	#scaled=do.call(cbind, klist.scale)#
+	if(!ifbinary){#
+		#scaled[is.nan(scaled)] <- 0#
+		pcaloadings=princomp(klist)$loadings[,1:numofp]#
+	}#
+	else{#
+		#scaled[is.nan(scaled)] <- 0#
+		scaled_binaried = ifelse(klist>0, 1, 0)#
+		pcaloadings=princomp(scaled_binaried)$loadings[,1:numofp]#
+	}#
+	#print 3d structre only when first 3 main components are used#
+	if(plot){#
+		thisplot = plot3d(pcaloadings,type="p",col="red",main=plotmain)+text3d(pcaloadings,text=rownames(pcaloadings),font=3,col="blue")#
+	}#
+	thisdist = as.matrix(dist(pcaloadings))#
+	hpcad=data.frame(thisdist,row.names = NULL,check.rows = FALSE);#
+	names(hpcad)=kcFiles;#
+	write.csv(hpcad,outputfile,row.names=kcFiles,quote=F);#
+	#write.csv(thisdist,file=outputfile, quote=F)
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(ifscale){#
+			ts=as.vector(scale(temp[,2]));#
+			if(i==1){#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts));#
+			}#
+			else{#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts)));#
+			}#
+		}#
+		else{#
+			if(i==1){#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]));#
+			}#
+			else{#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2])));#
+			}#
+		}#
+	}#
+	#require(rgl,quietly=T)klist#
+	#klist=read.csv(inputfile,header=T)#
+	# need to scale first then binary or you will get error info "Error in cov.wt(z) : 'x' must contain finite values only"#
+	#scaled = scale(klist)#
+	#klist.scale <- lapply(klist, function(m){return((m - mean(m)) / sd(m))})#
+	#scaled=do.call(cbind, klist.scale)#
+	if(!ifbinary){#
+		#scaled[is.nan(scaled)] <- 0#
+		pcaloadings=princomp(klist)$loadings[,1:numofp]#
+	}#
+	else{#
+		#scaled[is.nan(scaled)] <- 0#
+		scaled_binaried = ifelse(klist>0, 1, 0)#
+		pcaloadings=princomp(scaled_binaried)$loadings[,1:numofp]#
+	}#
+	#print 3d structre only when first 3 main components are used#
+	if(plot){#
+		thisplot = plot3d(pcaloadings,type="p",col="red",main=plotmain)+text3d(pcaloadings,text=rownames(pcaloadings),font=3,col="blue")#
+	}#
+	thisdist = as.matrix(dist(pcaloadings))#
+	hpcad=data.frame(thisdist,row.names = NULL,check.rows = FALSE);#
+	names(hpcad)=kcFiles;#
+	write.csv(hpcad,outputfile,row.names=kcFiles,quote=F);#
+	#write.csv(thisdist,file=outputfile, quote=F)
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(ifscale){#
+			ts=as.vector(scale(temp[,2]));#
+			if(i==1){#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts));#
+			} else {#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts)));#
+			}#
+		} else {#
+			if(i==1){#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]));#
+			} else {#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2])));#
+			}#
+		}#
+	}#
+	#require(rgl,quietly=T)klist#
+	#klist=read.csv(inputfile,header=T)#
+	# need to scale first then binary or you will get error info "Error in cov.wt(z) : 'x' must contain finite values only"#
+	#scaled = scale(klist)#
+	#klist.scale <- lapply(klist, function(m){return((m - mean(m)) / sd(m))})#
+	#scaled=do.call(cbind, klist.scale)#
+	if(!ifbinary){#
+		#scaled[is.nan(scaled)] <- 0#
+		pcaloadings=princomp(klist)$loadings[,1:numofp]#
+	} else {#
+		#scaled[is.nan(scaled)] <- 0#
+		scaled_binaried = ifelse(klist>0, 1, 0)#
+		pcaloadings=princomp(scaled_binaried)$loadings[,1:numofp]#
+	}#
+	#print 3d structre only when first 3 main components are used#
+	if(plot){#
+		thisplot = plot3d(pcaloadings,type="p",col="red",main=plotmain)+text3d(pcaloadings,text=rownames(pcaloadings),font=3,col="blue")#
+	}#
+	thisdist = as.matrix(dist(pcaloadings))#
+	hpcad=data.frame(thisdist,row.names = NULL,check.rows = FALSE);#
+	names(hpcad)=kcFiles;#
+	write.csv(hpcad,outputfile,row.names=kcFiles,quote=F);#
+	#write.csv(thisdist,file=outputfile, quote=F)
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(ifscale){#
+			ts=as.vector(scale(temp[,2]));#
+			if(i==1){#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts));#
+			} else {#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts)));#
+			}#
+		} else {#
+			if(i==1){#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]));#
+			} else {#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2])));#
+			}#
+		}#
+	}#
+	#require(rgl,quietly=T)klist#
+	#klist=read.csv(inputfile,header=T)#
+	# need to scale first then binary or you will get error info "Error in cov.wt(z) : 'x' must contain finite values only"#
+	#scaled = scale(klist)#
+	#klist.scale <- lapply(klist, function(m){return((m - mean(m)) / sd(m))})#
+	#scaled=do.call(cbind, klist.scale)#
+	if(!ifbinary){#
+		#scaled[is.nan(scaled)] <- 0#
+		pcaloadings=princomp(klist)$loadings[,1:numofp]#
+	} else {#
+		#scaled[is.nan(scaled)] <- 0#
+		scaled_binaried = ifelse(klist>0, 1, 0)#
+		pcaloadings=princomp(scaled_binaried)$loadings[,1:numofp]#
+	}#
+	#print 3d structre only when first 3 main components are used#
+	if(plot){#
+		thisplot = plot3d(pcaloadings,type="p",col="red",main=plotmain)+text3d(pcaloadings,text=rownames(pcaloadings),font=3,col="blue")#
+	}#
+	thisdist = as.matrix(dist(pcaloadings))#
+	hpcad=data.frame(thisdist,row.names = NULL,check.rows = FALSE);#
+	names(hpcad)=kcFiles;#
+	write.csv(hpcad,outputfile,row.names=kcFiles,quote=F);#
+	#write.csv(thisdist,file=outputfile, quote=F)
+length(kcFIles)
+length(kcFiles)
+l
+klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts));
+length(klist)
+a=cbind(klist,klist,klist)
+dim(a)
+a=cbind(klist,klist,klist,klist)
+dim(a)
+tl
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(ifscale){#
+			ts=as.vector(scale(temp[,2]));#
+			if(i==1){#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts));#
+			} else {#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts)));#
+			}#
+		} else {#
+			if(i==1){#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]));#
+			} else {#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2])));#
+			}#
+		}#
+	}#
+	#require(rgl,quietly=T)klist#
+	#klist=read.csv(inputfile,header=T)#
+	# need to scale first then binary or you will get error info "Error in cov.wt(z) : 'x' must contain finite values only"#
+	#scaled = scale(klist)#
+	#klist.scale <- lapply(klist, function(m){return((m - mean(m)) / sd(m))})#
+	#scaled=do.call(cbind, klist.scale)#
+	if(!ifbinary){#
+		#scaled[is.nan(scaled)] <- 0#
+		pcaloadings=princomp(klist)$loadings[,1:numofp]#
+	} else {#
+		#scaled[is.nan(scaled)] <- 0#
+		scaled_binaried = ifelse(klist>0, 1, 0)#
+		pcaloadings=princomp(scaled_binaried)$loadings[,1:numofp]#
+	}#
+	#print 3d structre only when first 3 main components are used#
+	if(plot){#
+		thisplot = plot3d(pcaloadings,type="p",col="red",main=plotmain)+text3d(pcaloadings,text=rownames(pcaloadings),font=3,col="blue")#
+	}#
+	thisdist = as.matrix(dist(pcaloadings))#
+	hpcad=data.frame(thisdist,row.names = NULL,check.rows = FALSE);#
+	names(hpcad)=kcFiles;#
+	write.csv(hpcad,outputfile,row.names=kcFiles,quote=F);#
+	#write.csv(thisdist,file=outputfile, quote=F)
+tl
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(ifscale){#
+			ts=as.vector(scale(temp[,2]));#
+			if(i==1){#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts));#
+			} else {#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts)));#
+			}#
+		} else {#
+			if(i==1){#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]));#
+			} else {#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2])));#
+			}#
+		}#
+	}#
+	#require(rgl,quietly=T)klist#
+	#klist=read.csv(inputfile,header=T)#
+	# need to scale first then binary or you will get error info "Error in cov.wt(z) : 'x' must contain finite values only"#
+	#scaled = scale(klist)#
+	#klist.scale <- lapply(klist, function(m){return((m - mean(m)) / sd(m))})#
+	#scaled=do.call(cbind, klist.scale)#
+	if(!ifbinary){#
+		#scaled[is.nan(scaled)] <- 0#
+		pcaloadings=princomp(klist)$loadings[,1:numofp]#
+	} else {#
+		#scaled[is.nan(scaled)] <- 0#
+		scaled_binaried = ifelse(klist>0, 1, 0)#
+		pcaloadings=princomp(scaled_binaried)$loadings[,1:numofp]#
+	}#
+	#print 3d structre only when first 3 main components are used#
+	if(plot){#
+		thisplot = plot3d(pcaloadings,type="p",col="red",main=plotmain)+text3d(pcaloadings,text=rownames(pcaloadings),font=3,col="blue")#
+	}#
+	thisdist = as.matrix(dist(pcaloadings))#
+	hpcad=data.frame(thisdist,row.names = NULL,check.rows = FALSE);#
+	names(hpcad)=kcFiles;#
+	write.csv(hpcad,outputfile,row.names=kcFiles,quote=F);#
+	#write.csv(thisdist,file=outputfile, quote=F)
+tl
+kcFiles=list.files(path.to.data,"*.kc");#
+	l=length(kcFiles);#
+	for (i in 1:l)#
+	{#
+		temp=read.table(paste(path.to.data,kcFiles[i],sep=""));#
+		tl=dim(temp)[1];#
+		if(ifscale){#
+			ts=as.vector(scale(temp[,2]));#
+			if(i==1){#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts));#
+			} else {#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=ts)));#
+			}#
+		} else {#
+			if(i==1){#
+				klist=as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2]));#
+			} else {#
+				klist=cbind(klist,as.vector(sparseMatrix((temp[,1]+1), as.vector(rep(1,tl)), x=temp[,2])));#
+			}#
+		}#
+	}#
+	#require(rgl,quietly=T)klist#
+	#klist=read.csv(inputfile,header=T)#
+	# need to scale first then binary or you will get error info "Error in cov.wt(z) : 'x' must contain finite values only"#
+	#scaled = scale(klist)#
+	#klist.scale <- lapply(klist, function(m){return((m - mean(m)) / sd(m))})#
+	#scaled=do.call(cbind, klist.scale)#
+	if(!ifbinary){#
+		#scaled[is.nan(scaled)] <- 0#
+		pcaloadings=princomp(klist)$loadings[,1:numofp]#
+	} else {#
+		#scaled[is.nan(scaled)] <- 0#
+		scaled_binaried = ifelse(klist>0, 1, 0)#
+		pcaloadings=princomp(scaled_binaried)$loadings[,1:numofp]#
+	}#
+	#print 3d structre only when first 3 main components are used#
+	if(plot){#
+		thisplot = plot3d(pcaloadings,type="p",col="red",main=plotmain)+text3d(pcaloadings,text=rownames(pcaloadings),font=3,col="blue")#
+	}#
+	thisdist = as.matrix(dist(pcaloadings))#
+	hpcad=data.frame(thisdist,row.names = NULL,check.rows = FALSE);#
+	names(hpcad)=kcFiles;#
+	write.csv(hpcad,outputfile,row.names=kcFiles,quote=F);#
+	#write.csv(thisdist,file=outputfile, quote=F)
+tl
+l
