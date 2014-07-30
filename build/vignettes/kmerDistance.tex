@@ -239,9 +239,9 @@ Further more, we plot the \texttt{x} and \texttt{y} pairwise distance matrix tog
 \hlcom{#prepare the result as vector}
 \hlstd{x}\hlkwb{=}\hlkwd{as.vector}\hlstd{(}\hlkwd{data.matrix}\hlstd{(x))}
 \hlstd{y}\hlkwb{=}\hlkwd{as.vector}\hlstd{(}\hlkwd{data.matrix}\hlstd{(y))}
-\hlcom{#normalize the data to between 0 and 1}
-\hlstd{x[x}\hlopt{>}\hlnum{0}\hlstd{]}\hlkwb{=}\hlstd{(x[x}\hlopt{>}\hlnum{0}\hlstd{]}\hlopt{-}\hlkwd{min}\hlstd{(x[x}\hlopt{>}\hlnum{0}\hlstd{]))}\hlopt{/}\hlstd{(}\hlkwd{max}\hlstd{(x[x}\hlopt{>}\hlnum{0}\hlstd{])}\hlopt{-}\hlkwd{min}\hlstd{(x[x}\hlopt{>}\hlnum{0}\hlstd{]))}
-\hlstd{y[y}\hlopt{>}\hlnum{0}\hlstd{]}\hlkwb{=}\hlstd{(y[y}\hlopt{>}\hlnum{0}\hlstd{]}\hlopt{-}\hlkwd{min}\hlstd{(y[y}\hlopt{>}\hlnum{0}\hlstd{]))}\hlopt{/}\hlstd{(}\hlkwd{max}\hlstd{(y[y}\hlopt{>}\hlnum{0}\hlstd{])}\hlopt{-}\hlkwd{min}\hlstd{(y[y}\hlopt{>}\hlnum{0}\hlstd{]))}
+\hlcom{#log transfer data }
+\hlstd{x[x}\hlopt{>}\hlnum{0}\hlstd{]}\hlkwb{=}\hlopt{-}\hlkwd{log}\hlstd{(x[x}\hlopt{>}\hlnum{0}\hlstd{])}
+\hlstd{y[y}\hlopt{>}\hlnum{0}\hlstd{]}\hlkwb{=}\hlopt{-}\hlkwd{log}\hlstd{(y[y}\hlopt{>}\hlnum{0}\hlstd{])}
 \hlcom{#fit a linear regression model to show the correlation between x and y }
 \hlstd{reg}\hlkwb{=}\hlkwd{lm}\hlstd{(x}\hlopt{~}\hlstd{y)}
 \hlkwd{plot}\hlstd{(x, y,}\hlkwc{xlab}\hlstd{=}\hlstr{"Boolean analysis"}\hlstd{,}\hlkwc{ylab}\hlstd{=}\hlstr{"hierarchical PCA"}\hlstd{)}
@@ -255,12 +255,12 @@ Further more, we plot the \texttt{x} and \texttt{y} pairwise distance matrix tog
 \hlkwd{summary}\hlstd{(reg)}\hlopt{$}\hlstd{r.squared}
 \end{alltt}
 \begin{verbatim}
-## [1] 0.6914
+## [1] 0.8295
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
 
-From the plot we can see the linear regression model shows a good correlation between our two function. Also the dots are located to two separate parts of the plot, which give us the evidence of two clusters among the genome data.
+From the plot we can see the linear regression model shows a good correlation between our two function with 0.8295 R squared score  . Also the dots are located to two separate parts of the plot, which give us the evidence of two clusters among the genome data.
 
 
 %%%%%%%%%%%%%%%%%%%%

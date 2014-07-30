@@ -129,9 +129,9 @@ Further more, we plot the \texttt{x} and \texttt{y} pairwise distance matrix tog
 #prepare the result as vector
 x=as.vector(data.matrix(x))
 y=as.vector(data.matrix(y))
-#normalize the data to between 0 and 1
-x[x>0]=(x[x>0]-min(x[x>0]))/(max(x[x>0])-min(x[x>0]))
-y[y>0]=(y[y>0]-min(y[y>0]))/(max(y[y>0])-min(y[y>0]))
+#log transfer data 
+x[x>0]=-log(x[x>0])
+y[y>0]=-log(y[y>0])
 #fit a linear regression model to show the correlation between x and y 
 reg=lm(x~y)
 plot(x, y,xlab="Boolean analysis",ylab="hierarchical PCA")
@@ -141,7 +141,7 @@ abline(reg)
 summary(reg)$r.squared 
 @
 
-From the plot we can see the linear regression model shows a good correlation between our two function. Also the dots are located to two separate parts of the plot, which give us the evidence of two clusters among the genome data.
+From the plot we can see the linear regression model shows a good correlation between our two function with 0.8295 R squared score  . Also the dots are located to two separate parts of the plot, which give us the evidence of two clusters among the genome data.
 
 
 %%%%%%%%%%%%%%%%%%%%

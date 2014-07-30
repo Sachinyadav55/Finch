@@ -34,10 +34,11 @@ kmerDistance.dif <- function(kmer.length,path.to.data="../data/"){
 	kcFiles=list.files(path.to.data,"*.kc")
 	l=length(kcFiles)
 	#save all kmers in klist
-	klist<-new.env()
+	#klist<-new.env()
+	klist=NULL
 	for (i in 1:l){
 		temp=read.table(paste(path.to.data,kcFiles[i],sep=""))
-		klist[[kcFiles[i]]]=temp[,1]
+		klist[[i]]=temp[,1]
 	}
 	#create a matrix to hold the diferential occupancy distance
 	dif.occupancy=matrix(0,l,l)
@@ -45,9 +46,9 @@ kmerDistance.dif <- function(kmer.length,path.to.data="../data/"){
 	for(i in 1:l){
 		j=i+1
 		while(j <=l){
-			l1=length(klist[[kcFiles[i]]])
-			l2=length(klist[[kcFiles[j]]])
-			dt=length(intersect(klist[[kcFiles[i]]],klist[[kcFiles[j]]]))
+			l1=length(klist[[i]])
+			l2=length(klist[[j]])
+			dt=length(intersect(klist[[i]],klist[[j]]))
 			dif.occupancy[i,j]=dif.occupancy[j,i]=(l1+l2-2*dt)/(4^kmer.length)		
 			j=j+1
 		}
