@@ -1,3 +1,3 @@
 library(roxygen2)
 
-roxygenize("kemrDistance")
+roxygenize("kmerDistance")
