@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.5.30)  30 JUL 2014 16:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.5.30)  31 JUL 2014 09:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -531,12 +531,13 @@ rDistance/data/"[][])[] []\T1/aett/m/it/9 #kmer.length = 8, path.to.data to dat
 a folder[][] 
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 147.
-
 [1
 
 ]
+
+Package xcolor Warning: Incompatible color definition on input line 147.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
@@ -596,10 +597,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 303.
 Here is how much of TeX's memory you used:
  7763 strings out of 493316
  112775 string characters out of 6137930
- 214052 words of memory out of 5000000
+ 212052 words of memory out of 5000000
  11102 multiletter control sequences out of 15000+600000
  26944 words of font info for 43 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,11n,45p,717b,389s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,11n,45p,1132b,376s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on kmerDistance.dvi (4 pages, 24408 bytes).
+Output written on kmerDistance.dvi (4 pages, 24540 bytes).
