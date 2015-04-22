@@ -24,7 +24,7 @@ NULL
 #' 
 #' @export
 
-kmerDistance.dif <- function(kmer.length,path.to.data="../data/"){
+kmerDistance.dif <- function(kmer.length,path.to.data="../data"){
 	if (is.null(kmer.length))
 		stop("Please specify the length of kmer")
 	if (is.null(path.to.data))
@@ -33,11 +33,12 @@ kmerDistance.dif <- function(kmer.length,path.to.data="../data/"){
 	#read in all kc files in path.to.data
 	kcFiles=list.files(path.to.data,"*.kc")
 	l=length(kcFiles)
-	#save all kmers in klist
-	#klist<-new.env()
 	klist=NULL
+    if(l==0)
+        stop("No kc files in the data folder: ",path.to.data)
 	for (i in 1:l){
-		temp=read.table(paste(path.to.data,kcFiles[i],sep=""))
+        f = file(paste(path.to.data,kcFiles[i],sep="/"))
+		temp=read.table(f)
 		klist[[i]]=temp[,1]
 	}
 	#create a matrix to hold the diferential occupancy distance
@@ -81,7 +82,7 @@ kmerDistance.dif <- function(kmer.length,path.to.data="../data/"){
 #' 
 #' @export
 
-kmerDistance.hpca <- function(kmer.length, path.to.data="../data/", ifscale = TRUE, ifbinary = FALSE, numofp = 3, ifplot = FALSE, plotmain = "Main"){
+kmerDistance.hpca <- function(kmer.length, path.to.data="../data", ifscale = TRUE, ifbinary = FALSE, numofp = 3, ifplot = FALSE, plotmain = "Main"){
 	if (is.null(kmer.length))
 		stop("Please specify the length of kmer")
 	if (is.null(path.to.data))
@@ -90,9 +91,12 @@ kmerDistance.hpca <- function(kmer.length, path.to.data="../data/", ifscale = TR
 	#read in all kc files in path.to.data
 	kcFiles=list.files(path.to.data,"*.kc")
 	l=length(kcFiles)
+    if(l==0)
+        stop("No kc files in the data folder: ",path.to.data)
 
 	for (i in 1:l){
-		temp=read.table(paste(path.to.data,kcFiles[i],sep=""))
+        f = file(paste(path.to.data,kcFiles[i],sep="/"))
+		temp=read.table(f)
 		tl=dim(temp)[1]
 		if(i==1){
 			klist=as.vector(sparseMatrix(c((temp[,1]+1),4^ kmer.length), as.vector(rep(1,tl+1)), x=c(temp[,2],0)))

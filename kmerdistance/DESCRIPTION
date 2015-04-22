@@ -1,7 +1,7 @@
 Package: kmerDistance
 Type: Package
 Title: Calculate pairwise distance between genome base on kmer stratege
-Version: 0.0.2
+Version: 0.0.8
 Date: 2014-07-24
 Author: Cai Huang
 Maintainer: Cai Huang <chuang95@gatech.edu>

@@ -80,7 +80,7 @@ The kc files contents kmer and counts for each genome sequence. In our test data
 The first function \Rfunction{kmerDistance.dif} compute pairwise distance of kmer data by using XOR discrete function, and we call it boolean analysis. We can call this function.
 
 <<kmerDistance.dif_function, eval=TRUE, echo=TRUE>>=
-x <- kmerDistance.dif(8,"../../kmerDistance/data/") #kmer.length = 8, path.to.data to data folder
+x <- kmerDistance.dif(8,"../../kmerDistance/data") #kmer.length = 8, path.to.data to data folder
 @
 
 The \texttt{x} return value is a distance matrix. Each column and row represents one virus genome. We can check the distance matrix.
@@ -103,7 +103,7 @@ First 3 virus are \emph{Mycobacterium.phage} and last 3 are \emph{Staphylococcus
 The second function. \Rfunction{kmerDistance.hpca} compute the pairwise distance of kmer data by using hierarchical PCA, and we call it linear algebra analysis. We can call this function.
 
 <<kmerDistance.hpca_function, eval=TRUE, echo=TRUE>>=
-y <- kmerDistance.hpca(8,"../../kmerDistance/data/") #kmer.length = 8, path.to.data to data folder
+y <- kmerDistance.hpca(8,"../../kmerDistance/data") #kmer.length = 8, path.to.data to data folder
 @
 
 This function also  returns \texttt{y} value as a distance matrix. Each column and row represents one virus genome. We can check the distance matrix.

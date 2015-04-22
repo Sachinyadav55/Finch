@@ -3,7 +3,7 @@
 \alias{kmerDistance.dif}
 \title{calculating pairwise distance between genomes base on kmer stratege}
 \usage{
-kmerDistance.dif(kmer.length, path.to.data = "../data/")
+kmerDistance.dif(kmer.length, path.to.data = "../data")
 }
 \arguments{
 \item{kmer.length}{length of kmer.}

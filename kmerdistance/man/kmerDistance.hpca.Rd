@@ -3,7 +3,7 @@
 \alias{kmerDistance.hpca}
 \title{calculating pairwise distance between genome base on kmer stratege}
 \usage{
-kmerDistance.hpca(kmer.length, path.to.data = "../data/", ifscale = TRUE,
+kmerDistance.hpca(kmer.length, path.to.data = "../data", ifscale = TRUE,
   ifbinary = FALSE, numofp = 3, ifplot = FALSE, plotmain = "Main")
 }
 \arguments{
