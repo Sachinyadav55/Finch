@@ -1,6 +1,6 @@
-build: makedirs roxygen
-	R CMD build kmerDistance
-	mv kmerDistance_*.tar.gz build/
+Finchbuild: makedirs roxygen
+	R CMD build Finch
+	mv Finch_*.tar.gz build/
 
 makedirs:
 	mkdir -p build
@@ -12,11 +12,11 @@ roxygen:
 	R CMD BATCH --no-save  pkgsrc/roxygenize.R /dev/stdout
 
 vignette: makedirs
-	cp -rf kmerDistance/vignettes build
+	cp -rf Finch/vignettes build
 	cp pkgsrc/vignette/Makefile build/vignettes
 	make -C build/vignettes build
 
 manual: makedirs
-	R CMD Rd2pdf --no-preview kmerDistance
-	mv -f kmerDistance.pdf build/
+	R CMD Rd2pdf --no-preview Finch
+	mv -f Finch.pdf build/
 

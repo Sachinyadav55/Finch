@@ -1,4 +1,4 @@
-Package: kmerDistance
+Package: Finch
 Type: Package
 Title: Calculate pairwise distance between genome base on kmer stratege
 Version: 0.0.8

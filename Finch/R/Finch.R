@@ -1,11 +1,11 @@
 require(Matrix)
 
-#' kmerdistance package
+#' Finch package
 #'
 #' R package use for calculating pairwise distance between genomes base on kmer stratege
 #'
 #' @docType package
-#' @name kmerDistance
+#' @name Finch
 NULL
 
 #########################################
@@ -24,7 +24,7 @@ NULL
 #' 
 #' @export
 
-kmerDistance.dif <- function(kmer.length,path.to.data="../data"){
+Finch.dif <- function(kmer.length,path.to.data="../data"){
 	if (is.null(kmer.length))
 		stop("Please specify the length of kmer")
 	if (is.null(path.to.data))
@@ -82,7 +82,7 @@ kmerDistance.dif <- function(kmer.length,path.to.data="../data"){
 #' 
 #' @export
 
-kmerDistance.hpca <- function(kmer.length, path.to.data="../data", ifscale = TRUE, ifbinary = FALSE, numofp = 3, ifplot = FALSE, plotmain = "Main"){
+Finch.hpca <- function(kmer.length, path.to.data="../data", ifscale = TRUE, ifbinary = FALSE, numofp = 3, ifplot = FALSE, plotmain = "Main"){
 	if (is.null(kmer.length))
 		stop("Please specify the length of kmer")
 	if (is.null(path.to.data))

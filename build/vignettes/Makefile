@@ -1,11 +1,11 @@
 build:
-	R CMD Rscript -e "library(knitr); knit('kmerDistance.Rnw')"
-	latex kmerDistance.tex
-	bibtex kmerDistance.aux
-	latex kmerDistance.tex
-	latex kmerDistance.tex
-	dvipdf kmerDistance.dvi
+	R CMD Rscript -e "library(knitr); knit('Finch.Rnw')"
+	latex Finch.tex
+	bibtex Finch.aux
+	latex Finch.tex
+	latex Finch.tex
+	dvipdf Finch.dvi
 
 clean:
-	rm -rf *.tex *.dvi *.pdf
+	#rm -rf *.tex *.dvi *.pdf
 
