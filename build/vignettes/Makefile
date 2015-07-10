@@ -1,4 +1,4 @@
-build:
+Finchbuild:
 	R CMD Rscript -e "library(knitr); knit('Finch.Rnw')"
 	latex Finch.tex
 	bibtex Finch.aux

@@ -1,4 +1,4 @@
-Finchbuild: makedirs roxygen
+build: makedirs roxygen
 	R CMD build Finch
 	mv Finch_*.tar.gz build/
 
@@ -14,7 +14,7 @@ roxygen:
 vignette: makedirs
 	cp -rf Finch/vignettes build
 	cp pkgsrc/vignette/Makefile build/vignettes
-	make -C build/vignettes build
+	make -C build/vignettes
 
 manual: makedirs
 	R CMD Rd2pdf --no-preview Finch

@@ -1,4 +1,4 @@
-Finch%\VignetteEngine{knitr::knitr}
+%\VignetteEngine{knitr::knitr}
 \documentclass{article}
 
 

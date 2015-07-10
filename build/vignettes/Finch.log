@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.5.30)  22 APR 2015 17:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.5.30)  10 JUL 2015 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -517,136 +517,58 @@ LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
 
 Package xcolor Warning: Incompatible color definition on input line 117.
 
-
-Package xcolor Warning: Incompatible color definition on input line 122.
-
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 126.
+(Font)              <9> on input line 124.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 126.
+(Font)              <5> on input line 124.
 
-Package xcolor Warning: Incompatible color definition on input line 139.
-
-
-Package xcolor Warning: Incompatible color definition on input line 145.
+Package xcolor Warning: Incompatible color definition on input line 137.
 
 [1
 
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 151.
+Package xcolor Warning: Incompatible color definition on input line 147.
 
 
-Package xcolor Warning: Incompatible color definition on input line 157.
-
-
-Package xcolor Warning: Incompatible color definition on input line 162.
-
-
-Package xcolor Warning: Incompatible color definition on input line 167.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 182.
+Package xcolor Warning: Incompatible color definition on input line 187.
 
 
-Package xcolor Warning: Incompatible color definition on input line 188.
+Package xcolor Warning: Incompatible color definition on input line 197.
 
 
-Package xcolor Warning: Incompatible color definition on input line 194.
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
-
-Package xcolor Warning: Incompatible color definition on input line 200.
-
-
-Package xcolor Warning: Incompatible color definition on input line 205.
-
-
-Package xcolor Warning: Incompatible color definition on input line 210.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 213--214
-
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 225.
-
-
-Package xcolor Warning: Incompatible color definition on input line 232.
-
-
-Overfull \hbox (22.77316pt too wide) in paragraph at lines 232--232
-[]\T1/aett/bx/n/9 ## Er-ror in as.vector(data.matrix(x)): er-ror in eval-u-at-i
-ng the ar-gu-ment 'x' in se-lect-ing a method
  []
 
 
 Package xcolor Warning: Incompatible color definition on input line 237.
 
-
-Overfull \hbox (22.77316pt too wide) in paragraph at lines 237--237
-[]\T1/aett/bx/n/9 ## Er-ror in as.vector(data.matrix(y)): er-ror in eval-u-at-i
-ng the ar-gu-ment 'x' in se-lect-ing a method
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 243.
-
-
-Package xcolor Warning: Incompatible color definition on input line 248.
-
-
-Package xcolor Warning: Incompatible color definition on input line 254.
-
-
-Package xcolor Warning: Incompatible color definition on input line 259.
-
-
-Overfull \hbox (27.48909pt too wide) in paragraph at lines 259--259
-[]\T1/aett/bx/n/9 ## Er-ror in plot(x, y, xlab = "Boolean anal-y-sis", ylab = "
-hi-er-ar-chi-cal PCA"): ob-ject 'x' not found[] 
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 264.
-
-
-Overfull \hbox (3.90945pt too wide) in paragraph at lines 264--264
-[]\T1/aett/bx/n/9 ## Er-ror in ti-tle(main = "Boolean anal-y-sis com-pare with 
-hi-er-ar-chi-cal PCA", : plot.new has not
- []
-
-
-Package xcolor Warning: Incompatible color definition on input line 269.
-
-
-Package xcolor Warning: Incompatible color definition on input line 275.
-
-
-Overfull \hbox (3.90945pt too wide) in paragraph at lines 275--275
-[]\T1/aett/bx/n/9 ## Er-ror in sum-mary(reg): er-ror in eval-u-at-ing the ar-gu
--ment 'ob-ject' in se-lect-ing a method for
- []
-
 [2]
+File: figure/plot_result-1.eps Graphic file (type eps)
+ <figure/plot_result-1.eps>
+Overfull \hbox (13.86435pt too wide) in paragraph at lines 252--253
+[][] 
+ []
 
-Package xcolor Warning: Incompatible color definition on input line 288.
 
-(./Finch.bbl
+Package xcolor Warning: Incompatible color definition on input line 273.
+
+[3] (./Finch.bbl
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <7> not available
 (Font)              Font shape `T1/aess/m/sl' tried instead on input line 6.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 318.
- [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 318.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 303.
+ [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 303.
  (./Finch.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 318.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 318.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 303.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 303.
 Package rerunfilecheck Info: File `Finch.out' has not changed.
 (rerunfilecheck)             Checksum: A578732EDEB574FD87BB494CEDC38A2F;359.
 
@@ -656,15 +578,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 318.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 303.
  ) 
 Here is how much of TeX's memory you used:
- 7759 strings out of 493316
- 112594 string characters out of 6137930
- 213030 words of memory out of 5000000
- 11101 multiletter control sequences out of 15000+600000
+ 7763 strings out of 493316
+ 112646 string characters out of 6137930
+ 213038 words of memory out of 5000000
+ 11102 multiletter control sequences out of 15000+600000
  26944 words of font info for 43 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,11n,45p,1125b,389s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,11n,45p,1125b,376s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Finch.dvi (3 pages, 24816 bytes).
+Output written on Finch.dvi (4 pages, 24672 bytes).
